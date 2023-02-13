@@ -27,6 +27,7 @@ body {
     -webkit-perspective: 1200px;
     perspective: 1200px;
     transition: 1s;
+    
 }
 
 .card:hover {
@@ -53,7 +54,7 @@ body {
             #e0e0e0, #ffffff 30%);
     /* line-height: 3px; */
     left: 50%;
-
+    box-shadow:  20px 20px 15px rgba(0, 0, 0, 0.2);
 }
 
 .inside p {
@@ -115,9 +116,8 @@ body {
 
 .icon {
     fill: transparent;
-    stroke: var(--pink);
+    stroke: #ff3334;
     stroke-width: 20;
-    cursor: pointer;
     position: absolute;
     left: 25%;
     top: 33%;
@@ -133,7 +133,7 @@ path {
     stroke-dashoffset: 0;
     stroke-dasharray: 1550;
     transform-origin: center;
-    animation: stroke-animation 2s ease-in-out forwards infinite;
+    animation: stroke-animation 4s ease-in-out forwards infinite;
 }
 
 .heart-background {
@@ -162,7 +162,7 @@ path {
     }
 
     80% {
-        fill: var(--pink);
+        fill: #ff3334;
         transform: scale(1.1);
     }
 
@@ -172,7 +172,7 @@ path {
 
     100% {
         stroke-dashoffset: 3100;
-        fill: var(--pink);
+        fill: #ff3334;
     }
 }
 
@@ -202,6 +202,7 @@ path {
     
     border: 1px solid #c5c5c5;
     border-radius: 5px;
+    box-shadow: -5px 5px 4px #c5c5c5;
 
 }
 .polaroid p{
@@ -214,4 +215,10 @@ path {
     border: 1px solid #c5c5c5;
     margin: 20px;
     height: 70%;
+    overflow: hidden;
+    
+}
+.img-container img{
+  
+    width: 100%;
 }
