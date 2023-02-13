@@ -196,7 +196,7 @@ path {
     position: absolute;
     bottom: 40px;
     left: 28%;
-    animation: blinking 2s linear 3;
+    animation: blinking 3s linear 2;
     opacity: 0%;
 }
 @keyframes blinking {
