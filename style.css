@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Homemade+Apple&family=Montserrat:wght@400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", Courier, monospace;
+    
+}
+
+body {
+    /* background-color: #ffcabe; */
+    background-color: #ff6f77;
+
+}
+
+.card {
+
+    width: 640px;
+    height: 400px;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    transition: 1s;
+}
+
+.card:hover {
+    transform: rotate(-5deg);
+
+
+}
+
+.card:hover .outside {
+    transform: rotateY(-130deg);
+}
+
+.outside,
+.inside {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    left: 50.1%;
+
+}
+
+.inside {
+    background: linear-gradient(to right,
+            #e0e0e0, #ffffff 30%);
+    /* line-height: 3px; */
+    left: 50%;
+
+}
+
+.inside p {
+    padding: 30px 40px 0 40px;
+    line-height: 2;
+    font-size: 14px;
+    font-family: 'Homemade Apple', cursive;
+
+}
+
+.inside p span {
+    line-height: 2;
+    font-size: 14px;
+    font-family: 'Homemade Apple', cursive;
+    display: flex;
+    align-items: center;
+    /* text-align: right; */
+}
+.inside p span img{
+    
+    height: 55px;
+    width: 80px;
+
+
+
+}
+.outside {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: 1;
+    transform-origin: left;
+    transition: 2s;
+
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+
+}
+
+.front {
+    background-color: white;
+
+}
+
+:root {
+    /* --pink-light: #ff7eb4; */
+    --pink: #ff3334;
+}
+
+
+
+
+.icon {
+    fill: transparent;
+    stroke: var(--pink);
+    stroke-width: 20;
+    cursor: pointer;
+    position: absolute;
+    left: 25%;
+    top: 33%;
+
+}
+
+svg {
+    overflow: visible;
+    width: 10rem;
+}
+
+path {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1550;
+    transform-origin: center;
+    animation: stroke-animation 2s ease-in-out forwards infinite;
+}
+
+.heart-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+}
+
+
+
+@keyframes stroke-animation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    30% {
+        stroke-dashoffset: 1550;
+    }
+
+    60% {
+        stroke-dashoffset: 3100;
+        fill: transparent;
+        transform: scale(1);
+    }
+
+    80% {
+        fill: var(--pink);
+        transform: scale(1.1);
+    }
+
+    90% {
+        transform: scale(1);
+    }
+
+    100% {
+        stroke-dashoffset: 3100;
+        fill: var(--pink);
+    }
+}
+
+
+
+.back {
+    transform: rotateY(180deg);
+    background: linear-gradient(to left, #e0e0e0, #ffffff 30%);
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid #c5c5c5 ;
+    /* align-items: center; */
+}
+
+.outside .front p {
+    font-family: 'Amatic SC';
+    font-weight: 700;
+    font-size: 27px;
+    text-align: center;
+    margin-top: 40px;
+    letter-spacing: 6px;
+}
+.polaroid{
+    margin: 60px 40px 40px 40px;
+    height: 60%;
+    width: 60%;
+    
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+
+}
+.polaroid p{
+    font-family: 'Homemade Apple', cursive;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+}
+.img-container{
+    border: 1px solid #c5c5c5;
+    margin: 20px;
+    height: 70%;
+}
